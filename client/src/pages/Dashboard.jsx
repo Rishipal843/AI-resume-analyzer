@@ -28,7 +28,7 @@ const Dashboard = () => {
     formData.append("jobDescription", jd);
 
     try {
-      const res = await fetch("http://localhost:5000/api/resume/analyze", {
+      const res = await fetch("https://ai-resume-analyzer3.onrender.com/api/resume/analyze", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${getToken()}`
