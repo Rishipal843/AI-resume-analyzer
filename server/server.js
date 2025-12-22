@@ -8,7 +8,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: ["https://ai-resume-analyzer-pi-opal.vercel.app"],
+  origin: ["https://ai-resume-analyzer-pi-opal.vercel.app/"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
