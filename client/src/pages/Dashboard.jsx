@@ -129,17 +129,27 @@ const Dashboard = () => {
 
           <div className="flex justify-center pt-4">
             <button
-              type="submit"
-              disabled={loading}
-              className="px-10 py-4 bg-[#2dd4bf] text-[#0a0f18] font-black rounded-2xl shadow-[0_0_25px_rgba(45,212,191,0.3)] hover:shadow-[0_0_35px_rgba(45,212,191,0.5)] hover:scale-[1.02] transition-all disabled:opacity-50 flex items-center gap-2 group"
-            >
-              {loading ? "Analyzing..." : "Analyze Resume"}
-              {!loading && (
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              )}
-            </button>
+  type="submit"
+  disabled={loading}
+  className="px-10 py-4 bg-[#2dd4bf] text-[#0a0f18] font-black rounded-2xl shadow-[0_0_25px_rgba(45,212,191,0.3)] hover:shadow-[0_0_35px_rgba(45,212,191,0.5)] hover:scale-[1.02] transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center gap-3 group"
+>
+  {loading ? (
+    <>
+      <svg className="animate-spin h-5 w-5 text-[#0a0f18]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      </svg>
+      <span>Processing AI Insights...</span>
+    </>
+  ) : (
+    <>
+      <span>Analyze Resume</span>
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      </svg>
+    </>
+  )}
+</button>
           </div>
         </form>
       </main>
