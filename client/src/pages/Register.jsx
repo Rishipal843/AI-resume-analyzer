@@ -59,6 +59,7 @@ const Register = () => {
           <div>
             <h1 className="text-3xl font-bold tracking-tight text-white">Create account</h1>
             <p className="mt-2 text-gray-400">Get started with your ATS analysis</p>
+            <p className="mt-2 text-gray-400">Please wait because render free teir takes time </p>
           </div>
         </div>
 

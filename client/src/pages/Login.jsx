@@ -66,6 +66,7 @@ const Login = () => {
               Welcome back
             </h1>
             <p className="mt-2 text-gray-400">Sign in to analyze your resume</p>
+            <p className="mt-2 text-gray-400">Please wait because render free teir takes time </p>
           </div>
         </div>
 
